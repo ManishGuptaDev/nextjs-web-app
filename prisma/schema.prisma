@@ -22,3 +22,15 @@ model Todo {
 
   @@map("todos")
 }
+
+
+model History {
+  id                 Int      @id @default(autoincrement())
+  usdValue           Float
+  convertedCurrency  String
+  rate               Float
+  convertedValue     Float
+  createdAt          DateTime @default(now()) @map("created_at")
+
+  @@map("history")
+}
